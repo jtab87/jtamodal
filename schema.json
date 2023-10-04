@@ -1,0 +1,168 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "jtamodal",
+    "friendlyName": "jtamodal",
+    "description": "popup modal",
+    "icon": "Card",
+    "styles": [
+      "padding",
+      "background",
+      "size",
+      "border"
+    ],
+    "hasChildren": true,
+    "settings": [
+      {
+        "section": true,
+        "name": "Entête",
+        "settings": [
+          {
+            "type": "text",
+            "key": "titre",
+            "label": "Titre",
+            "defaultValue" : "Nouveau titre"
+          },
+          {
+            "type": "color",
+            "label": "Couleur du texte",
+            "key": "colorHeader",
+            "defaultValue": "#000"
+          },
+          {
+            "type": "event",
+            "label": "OnClick sur X",
+            "key": "clickFermer"
+          }
+        ]
+      },
+      {
+        "type": "boolean",
+        "key": "isFooter",
+        "label": "Avec footer",
+        "defaultValue": true
+      },
+      {
+        "section": true,
+        "name": "Bouton Ok",
+        "dependsOn": "isFooter",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Label",
+            "key": "btOk",
+            "defaultValue": "Ok"
+          },
+          {
+            "type": "select",
+            "label": "Style",
+            "key": "styleBtOk",
+            "options": [
+              {
+                "label": "Primary",
+                "value": "primary"
+              },
+              {
+                "label": "Secondary",
+                "value": "secondary"
+              },
+              {
+                "label": "Action",
+                "value": "cta"
+              },
+              {
+                "label": "Warning",
+                "value": "warning"
+              },
+              {
+                "label": "Over background",
+                "value": "overBackground"
+              }
+            ],
+            "defaultValue": "overBackground"
+          },
+          {
+            "type": "event",
+            "label": "OnClick",
+            "key": "clickOk"
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Bouton Annuler",
+        "dependsOn": "isFooter",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Label",
+            "key": "btAnnule",
+            "defaultValue": "Annuler"
+          },
+          {
+            "type": "select",
+            "label": "Style",
+            "key": "styleBtAnnule",
+            "options": [
+              {
+                "label": "Primary",
+                "value": "primary"
+              },
+              {
+                "label": "Secondary",
+                "value": "secondary"
+              },
+              {
+                "label": "Action",
+                "value": "cta"
+              },
+              {
+                "label": "Warning",
+                "value": "warning"
+              },
+              {
+                "label": "Over background",
+                "value": "overBackground"
+              }
+            ],
+            "defaultValue": "overBackground"
+          },
+          {
+            "type": "event",
+            "label": "OnClick",
+            "key": "clickAnnuler"
+          }
+        ]
+      },
+
+      {
+        "type": "select",
+        "label": "Taille boutons",
+        "dependsOn": "isFooter",
+        "key": "sizeButton",
+        "options": [
+          {
+          "label": "Small",
+          "value": "S"
+          },
+          {
+          "label": "Medium",
+          "value": "M"
+          },
+          {
+          "label": "Large",
+          "value": "L"
+          },
+          {
+          "label": "Extra large",
+          "value": "XL"
+          }
+        ],
+        "defaultValue": "M"
+        }
+
+
+    ]
+  }
+}
