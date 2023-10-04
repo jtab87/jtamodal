@@ -72,6 +72,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 11111;
+    min-width: 300px;
+    min-height: 200px;
   }
 
   .jta_header {
