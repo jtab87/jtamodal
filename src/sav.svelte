@@ -18,8 +18,8 @@
   const component = getContext("component");
 </script>
 
-<div use:styleable={$component.styles} class="jta_modal">
-  <div class="jta_header">
+<div use:styleable={$component.styles} class="jta_container">
+  <div class="jta_header" style="border-bottom: 1px solid {colorHeader}">
     <div>
       <h2 style="color:{colorHeader};">{titre}</h2>
     </div>
@@ -33,8 +33,8 @@
       />
     </div>
   </div>
-
-  <div class="jta_modal_inner">
+  <div class="jta_travail">
+    <!-- Contenu du travail ici -->
     <slot />
   </div>
 
@@ -62,33 +62,20 @@
     </div>
   {/if}
 </div>
-<div class="jta_modal-container" on:click={clickFermer} on:keydown={clickFermer} />
 
 <style>
-  .jta_modal-container {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
-  .jta_modal {
+  .jta_container {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 11111;
     min-width: 300px;
     min-height: 200px;
-    /*background-color: white;*/
-    padding: 5px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-    z-index: 9999;
   }
+
   .jta_header {
     padding: 10px;
     display: flex;
@@ -102,25 +89,24 @@
     font-weight: 600;
   }
 
-  .jta_close {
+  .jta_header .jta_close {
     cursor: pointer;
   }
 
-  .jta_modal_inner {
+  .jta_travail {
     flex-grow: 1;
     padding: 10px;
     overflow: auto;
     overflow-x: hidden;
-    /*background-color:yellow;*/
   }
 
   .jta_footer {
     padding: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Aligner les éléments à droite */
   }
 
   .jta_footer button {
-    margin-left: 10px;
+    margin-left: 10px; /* Marge entre les boutons */
   }
 </style>

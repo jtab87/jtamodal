@@ -32,7 +32,7 @@
           },
           {
             "type": "event",
-            "label": "OnClick sur X",
+            "label": "Fermer",
             "key": "clickFermer"
           }
         ]
