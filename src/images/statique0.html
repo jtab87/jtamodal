@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .jta_modal-container {
+         display: flex;
+         /*align-items: center;
+         justify-content: center;*/
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0,0,0,0.5);
+		 z-index: 999;
+      }
+      .jta_modal {
+	  
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 300px;
+		min-height: 200px;	  
+	  
+         background-color: white;
+         padding: 5px;
+         width: 800px;
+         height: 400px;
+         box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+		 z-index: 9999;
+      }
+	  .jta_header {
+		padding: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	  }
+
+	  .jta_header h2 {
+		margin: 0;
+		font-family: var(--font-accent);
+		font-weight: 600;
+	  }
+
+	  .jta_close {
+		cursor: pointer;
+	  }
+	  
+	  .jta_modal_inner {
+		flex-grow: 1;
+		padding: 10px;
+		overflow: auto;
+		overflow-x: hidden;
+		/*background-color:yellow;*/
+	  }
+	  
+	  .jta_footer {
+		padding: 10px;
+		display: flex;
+		justify-content: flex-end;
+	  }
+	  
+	 .jta_footer button {
+		margin-left: 10px;
+	 }
+   </style>
+</head>
+<body>
+<h1>toto</h1><h1>toto</h1><h1>toto</h1><h1>toto</h1><h1>toto</h1><h1>toto</h1><h1>toto</h1><h1>toto</h1><h1>totototototototototototototototototototototototototototototototototototototototototototototototototo</h1><img src="c:/tmp/aa.png"/>
+
+	<div class="jta_modal">
+		<div class="jta_header">
+			<div><h2>le titre</h2></div>
+			<div class="jta_close">X</div>
+		</div>
+		<div class="jta_modal_inner">
+			qsdqsd<br>ajeter
+		</div>
+		<div class="jta_footer">
+			<button>cocou</button>
+			<button>bbbb</button>
+		</div>
+  </div>
+  <div class="jta_modal-container"> </div>
+
+
+</body>
+</html>
