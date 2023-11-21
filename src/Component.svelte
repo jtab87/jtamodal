@@ -1,6 +1,6 @@
 <script>
   import { getContext } from "svelte";
-  import { Label, Layout, ModalContent, Modal } from "@budibase/bbui";
+  //import { Label, Layout, ModalContent, Modal } from "@budibase/bbui";
 
   export let titre = "Nouveau titre";
   export let btOk = "Ok";

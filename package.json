@@ -1,6 +1,6 @@
 {
   "name": "jtamodal",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "popup modal",
   "license": "MIT",
   "svelte": "index.js",
